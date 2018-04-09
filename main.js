@@ -41,6 +41,9 @@ let boxRing = document.querySelector("#box-ring")
 let rightCorner = document.querySelector("right-corner")
 let masterMada = document.querySelector("#master-mada")
 let infoDiv = document.querySelector("#info")
+
+let leftPoke = document.querySelector("#leftr-corner-poke")
+let rightPoke = document.querySelector("#right-corner-poke")
     // let picPokemon = document.querySelector("#pic-pokemon")
 
 let mashaPokemon = document.querySelector("#masha-pokemon")
@@ -124,6 +127,18 @@ pokemonIds.forEach((id, idx) => {
 
             imgPoke.addEventListener("mouseleave", (event) => {
                 hideStats()
+            })
+
+            imgPoke.addEventListener("click", (event) => {
+                let ringPoke = document.createElement("img")
+                ringPoke.src = pic
+                if (pic.includes("18") || pic.includes("26") || pic.includes("37")) {
+                    leftPoke.innerHTML = ""
+                    leftPoke.appendChild(ringPoke)
+                } else {
+                    rightPoke.innerHTML = ""
+                    rightPoke.appendChild(ringPoke)
+                }
             })
 
             // let divBtn = document.createElement("div")
