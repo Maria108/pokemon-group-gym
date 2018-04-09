@@ -1,5 +1,10 @@
 body {
-    background-image: url("box-ring.jpg");
+    background-image: url("images/box-ring.jpg");
     background-repeat: no-repeat;
     background-position: center
 }
+
+
+/* #info {
+    display: none
+} */

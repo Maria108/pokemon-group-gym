@@ -13,14 +13,6 @@ class Master {
 
 }
 
-// class Master {
-//     constructor() {
-//         this.myPokemon = {}
-//         this.name = ""
-//         this.pokemonArray = []
-//     }
-// }
-
 class Pokemon {
     constructor(name, hp, attack, defense, abilities, moves, pic) {
         this.name = name
@@ -40,33 +32,6 @@ let mada = new Master()
 
 const pokemonIds = ["018", "026", "037", "134", "120", "190"];
 
-// function fetchPokemon(id, master) {
-//     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-//         .then((response) => {
-//             let { name, stats, abilities, moves } = response.data
-
-//             // Get abilities
-//             abilities = getAbils(abilities)
-//             moves = getMoves(moves)
-
-//             // Get stats
-//             let hp = getStat(stats, "hp")
-//             let attack = getStat(stats, "attack")
-//             let defense = getStat(stats, "special-defense")
-
-//             // Get picture
-//             let pic = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png`;
-
-//             // Create pokemon
-//             let pokemon = new Pokemon(name, hp, attack, defense, abilities, moves, pic)
-
-//             master.add(pokemon)
-
-//         }).catch((error) => {
-//             console.log(error)
-//         })
-// }
-
 let mainDiv = document.querySelector("#main")
 
 let gymName = document.querySelector("#gym-name")
@@ -75,6 +40,7 @@ let leftCorner = document.querySelector("#left-corner")
 let boxRing = document.querySelector("#box-ring")
 let rightCorner = document.querySelector("right-corner")
 let masterMada = document.querySelector("#master-mada")
+let infoDiv = document.querySelector("#info")
     // let picPokemon = document.querySelector("#pic-pokemon")
 
 let mashaPokemon = document.querySelector("#masha-pokemon")
@@ -119,31 +85,46 @@ pokemonIds.forEach((id, idx) => {
 
             let imgPoke = document.createElement("img")
             imgPoke.src = pic
+            imgPoke.className = "poke-pic"
             divImg.appendChild(imgPoke)
 
-            // Create div for information about pokemon
-            let divInfo = document.createElement("div")
-            divInfo.className = "info"
-                // divPoke.appendChild(divInfo)
+            function showStats(pokemon) {
+                let divStats = document.createElement("div")
+                divStats.className = "poke-info"
+                infoDiv.innerHTML = ""
+                infoDiv.appendChild(divStats)
 
-            // Create list for pokemon's stat
-            let ul = document.createElement("ul")
-            ul.className = "description"
-            divInfo.appendChild(ul)
-            let h2 = document.createElement("h2")
-            ul.appendChild(h2)
+                // Create list for pokemon's stat
+                let ul = document.createElement("ul")
+                ul.className = "description"
+                divStats.appendChild(ul)
+                let h2 = document.createElement("h2")
+                ul.appendChild(h2)
 
-            for (const prop in pokemon) {
-                if (prop !== "pic") {
-                    if (prop === "name") {
-                        h2.innerHTML = `${pokemon[prop].toUpperCase()}`
-                    } else {
-                        let list = document.createElement("li")
-                        ul.appendChild(list)
-                        list.innerHTML = `${prop}: ${pokemon[prop]}`
+                for (const prop in pokemon) {
+                    if (prop !== "pic") {
+                        if (prop === "name") {
+                            h2.innerHTML = `${pokemon[prop].toUpperCase()}`
+                        } else {
+                            let list = document.createElement("li")
+                            ul.appendChild(list)
+                            list.innerHTML = `${prop}: ${pokemon[prop]}`
+                        }
                     }
                 }
             }
+
+            function hideStats() {
+                infoDiv.innerHTML = ""
+            }
+
+            imgPoke.addEventListener("mouseover", (event) => {
+                showStats(pokemon)
+            })
+
+            imgPoke.addEventListener("mouseleave", (event) => {
+                hideStats()
+            })
 
             // let divBtn = document.createElement("div")
             // divBtn.className = 'div-btn'
@@ -221,28 +202,3 @@ function getMoves(move) {
     move.forEach(el => moves.push(el.move.name))
     return moves.slice(0, 4).join(", ");
 }
-
-// class Gym {
-//     constructor() {
-//         this.masters = []
-//     }
-
-//     add(master) {
-//         this.masters.push(master)
-//     }
-
-//     all() {
-//         return this.masters
-//     }
-// }
-
-// let gym = new Gym()
-
-// let keeevale = new Keeevale()
-
-
-// let masterMasha = new MasterMasha()
-
-// gym.add(masterMada)
-// gym.add(masterMasha)
-// console.log(gym.all())
