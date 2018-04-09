@@ -44,7 +44,13 @@ let infoDiv = document.querySelector("#info")
 
 let leftPoke = document.querySelector("#leftr-corner-poke")
 let rightPoke = document.querySelector("#right-corner-poke")
-    // let picPokemon = document.querySelector("#pic-pokemon")
+
+let btnF = document.querySelector("#btn-fight")
+let btnC = document.querySelector("#btn-clean")
+
+let fightDiv = document.querySelector("#fight")
+
+// let picPokemon = document.querySelector("#pic-pokemon")
 
 let mashaPokemon = document.querySelector("#masha-pokemon")
 let madaPokemon = document.querySelector("#mada-pokemon")
@@ -141,6 +147,8 @@ pokemonIds.forEach((id, idx) => {
                 }
             })
 
+
+
             // let divBtn = document.createElement("div")
             // divBtn.className = 'div-btn'
             // divPoke.appendChild(divBtn)
@@ -198,6 +206,13 @@ pokemonIds.forEach((id, idx) => {
         }).catch((error) => {
             console.log(error)
         })
+})
+
+btnF.addEventListener("click", (event) => {
+    leftPoke.innerHTML = ""
+    rightPoke.innerHTML = ""
+    fightDiv.style.display = "block"
+        // fightDiv.style.display === "block"
 })
 
 function getStat(stats, name) {

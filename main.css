@@ -8,3 +8,8 @@ body {
 /* #info {
     display: none
 } */
+
+#fight {
+    width: 100%;
+    display: none
+}
