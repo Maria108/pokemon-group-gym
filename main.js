@@ -75,7 +75,7 @@ pokemonIds.forEach((id, idx) => {
 
             // Create img
             let divImg = document.createElement("div")
-            divImg.className = "box col l4"
+            divImg.className = "box col l12"
 
             if (id === "018" || id === "026" || id === "037") {
                 mashaPokemon.appendChild(divImg)
