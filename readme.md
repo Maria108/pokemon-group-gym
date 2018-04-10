@@ -1,0 +1,1 @@
+This co-project is a continuation of NYCDA's previous project, the Pokemon Pokedex. It involves the combination of two trainers' pokedexes, unified into a Pokegym. The site uses html, css, javascript, frameworks, axios calls and prototypes. This project was created by Mariia Abashina and Mada Romero.
