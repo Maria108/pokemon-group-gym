@@ -31,8 +31,8 @@ let mada = new Master()
 const pokemonIds = ["018", "026", "037", "134", "120", "190"];
 
 let infoDiv = document.querySelector("#info")
-let leftPoke = document.querySelector("#left-corner")
-let rightPoke = document.querySelector("#right-corner")
+let leftPoke = document.querySelector("#left-corner-poke")
+let rightPoke = document.querySelector("#right-corner-poke")
 let btnF = document.querySelector("#btn-fight")
 let btnC = document.querySelector("#btn-clean")
 let fightDiv = document.querySelector("#fight")
