@@ -38,14 +38,15 @@ h2 {
 
 #left-corner,
 #right-corner {
-    margin-top: 400px;
+    margin-top: 350px;
+    padding: 0;
 }
 
-
-/* #title {
+#title {
     width: 50%;
     margin: 4px;
-} */
+    text-align: center
+}
 
 
 /* 
@@ -53,10 +54,9 @@ h2 {
     margin: 0;
 } */
 
-
-/* #main-ring {
-    background-image: url("images/title_decode.gif")
-} */
+#main-ring {
+    text-align: center;
+}
 
 
 /* #right-corner-poke {
@@ -79,9 +79,10 @@ h2 {
 }
 
 #box-ring {
-    margin-top: 190px;
+    margin-top: 140px;
 }
 
 .ring-poke {
-    width: 220%
+    width: 111px;
+    height: 111px;
 }
