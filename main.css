@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/gymwtrainersnoring.png);
+    background-image: url("images/background.png");
     background-size: 133vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,14 +13,14 @@ body {
 
 #masha-pokemon,
 #mada-pokemon {
-    margin-top: 400px;
+    margin-top: 350px;
 }
 
 ul.description {
     text-align: left;
     font-size: 20px;
     list-style-type: none;
-    background-color: #ffffffcc;
+    background-color: #f6efcec7;
     padding: 8px 20px;
     border-radius: 1em;
     box-shadow: 0px 0px 10px -3px #000;
@@ -36,15 +36,37 @@ h2 {
     font-family: 'IM Fell English SC', serif;
 }
 
-#left-corner-poke,
-#right-corner-poke {
+#left-corner,
+#right-corner {
     margin-top: 400px;
 }
+
+
+/* #title {
+    width: 50%;
+    margin: 4px;
+} */
+
+
+/* 
+#title-main {
+    margin: 0;
+} */
+
+
+/* #main-ring {
+    background-image: url("images/title_decode.gif")
+} */
+
+
+/* #right-corner-poke {
+    margin-left: 30px;
+} */
 
 #result {
     text-align: center;
     font-size: 30px;
-    background-color: #ffffffcc;
+    background-color: #f6efcec7;
     border-radius: 1em;
     box-shadow: 0px 0px 10px -3px #000;
     font-family: 'IM Fell English SC', serif;
@@ -57,7 +79,7 @@ h2 {
 }
 
 #box-ring {
-    margin-top: 300px;
+    margin-top: 190px;
 }
 
 .ring-poke {
