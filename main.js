@@ -28,30 +28,15 @@ class Pokemon {
 let masha = new Master()
 let mada = new Master()
 
-// let mainDiv = document.querySelector("#pokemon-row")
-
 const pokemonIds = ["018", "026", "037", "134", "120", "190"];
 
-let mainDiv = document.querySelector("#main")
-
-let gymName = document.querySelector("#gym-name")
-let masterMasha = document.querySelector("#master-masha")
-let leftCorner = document.querySelector("#left-corner")
-let boxRing = document.querySelector("#box-ring")
-let rightCorner = document.querySelector("right-corner")
-let masterMada = document.querySelector("#master-mada")
 let infoDiv = document.querySelector("#info")
-
-let leftPoke = document.querySelector("#leftr-corner-poke")
+let leftPoke = document.querySelector("#left-corner-poke")
 let rightPoke = document.querySelector("#right-corner-poke")
-
 let btnF = document.querySelector("#btn-fight")
 let btnC = document.querySelector("#btn-clean")
-
 let fightDiv = document.querySelector("#fight")
-
-// let picPokemon = document.querySelector("#pic-pokemon")
-
+let result = document.querySelector("#result")
 let mashaPokemon = document.querySelector("#masha-pokemon")
 let madaPokemon = document.querySelector("#mada-pokemon")
 
@@ -79,8 +64,6 @@ pokemonIds.forEach((id, idx) => {
             } else {
                 mada.add(pokemon)
             }
-
-            // Create div for store pokemon
 
             // Create img
             let divImg = document.createElement("div")
@@ -137,6 +120,7 @@ pokemonIds.forEach((id, idx) => {
 
             imgPoke.addEventListener("click", (event) => {
                 let ringPoke = document.createElement("img")
+                ringPoke.className = "ring-poke"
                 ringPoke.src = pic
                 if (pic.includes("18") || pic.includes("26") || pic.includes("37")) {
                     leftPoke.innerHTML = ""
@@ -147,72 +131,33 @@ pokemonIds.forEach((id, idx) => {
                 }
             })
 
-
-
-            // let divBtn = document.createElement("div")
-            // divBtn.className = 'div-btn'
-            // divPoke.appendChild(divBtn)
-
-            // let btnChoose = document.createElement("a")
-            // btnChoose.className = "choose-btn waves-effect waves-light btn"
-            // btnChoose.innerHTML = "CHOOSE"
-            // divBtn.appendChild(btnChoose)
-
-            // let audio = document.createElement("audio")
-            // audio.src = `audio/${id}.ogx`
-
-            // let audioVoice = document.createElement("audio")
-            // audioVoice.src = `audio/voice-${id}.ogx`
-
-            // divImg.addEventListener("click", (event) => {
-            //     audioVoice.play()
-            // })
-
-            // btnChoose.addEventListener("click", (event) => {
-            //     console.log(event)
-            //     let boxes = document.querySelectorAll(".box")
-            //     boxes.forEach((box) => {
-            //         box.style.display = "none"
-            //     })
-
-            //     let activeBox = event.target.parentNode.parentNode;
-            //     let isActive = activeBox.getAttribute("active");
-
-            //     if (!isActive) {
-            //         divInfo.style.display = "flex"
-            //         imgPoke.style.width = "400px"
-            //         divPoke.className = "box col s12 m12 l12 width-change"
-            //         imgPoke.style.filter = "none"
-            //         activeBox.style.display = "flex"
-            //         btnChoose.innerHTML = "CLOSE"
-            //         audio.play()
-            //         activeBox.setAttribute("active", "true");
-            //     } else {
-            //         divInfo.style.display = "none";
-            //         divPoke.className = "box col s12 m6 l4"
-            //         btnChoose.innerHTML = "CHOOSE"
-            //         imgPoke.style.width = "300px"
-            //         imgPoke.style.filter = "grayscale(1)"
-            //         audio.pause();
-            //         audio.currentTime = 0;
-            //         activeBox.setAttribute("active", "");
-            //         boxes.forEach((box) => {
-            //             box.style.display = "block"
-            //         })
-            //     }
-            // })
-            // callback(masterMasha)
-            // console.log(pokemon)
         }).catch((error) => {
             console.log(error)
         })
 })
 
 btnF.addEventListener("click", (event) => {
+    leftPoke.style.display = "none"
+    rightPoke.style.display = "none"
+    fightDiv.style.display = "block"
+    setTimeout(() => {
+        fightDiv.style.display = "none";
+        randomWinner()
+        leftPoke.style.display = "block"
+        rightPoke.style.display = "block"
+    }, 2500);
+})
+
+function randomWinner() {
+    let arr = ["loser : winner", "winner : loser"]
+    let num = Math.floor(Math.random() * (arr.length))
+    result.innerHTML = arr[num]
+}
+
+btnC.addEventListener("click", (event) => {
     leftPoke.innerHTML = ""
     rightPoke.innerHTML = ""
-    fightDiv.style.display = "block"
-        // fightDiv.style.display === "block"
+    result.innerHTML = ""
 })
 
 function getStat(stats, name) {

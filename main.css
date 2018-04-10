@@ -1,15 +1,65 @@
 body {
-    background-image: url("images/box-ring.jpg");
+    background-image: url(images/gymwtrainersnoring.png);
+    background-size: 133vh;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center
+    background-attachment: fixed;
 }
-
-
-/* #info {
-    display: none
-} */
 
 #fight {
     width: 100%;
     display: none
+}
+
+#masha-pokemon,
+#mada-pokemon {
+    margin-top: 400px;
+}
+
+ul.description {
+    text-align: left;
+    font-size: 20px;
+    list-style-type: none;
+    background-color: #ffffffcc;
+    padding: 8px 20px;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px -3px #000;
+    margin-top: 5px;
+    font-family: 'IM Fell English SC', serif;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'IM Fell English SC', serif;
+}
+
+#left-corner-poke,
+#right-corner-poke {
+    margin-top: 400px;
+}
+
+#result {
+    text-align: center;
+    font-size: 30px;
+    background-color: #ffffffcc;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px -3px #000;
+    font-family: 'IM Fell English SC', serif;
+}
+
+.btn {
+    border-radius: 1em;
+    background-color: #73948e;
+    font-family: 'IM Fell English SC', serif;
+}
+
+#box-ring {
+    margin-top: 300px;
+}
+
+.ring-poke {
+    width: 220%
 }

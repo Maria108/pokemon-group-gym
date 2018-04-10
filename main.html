@@ -2,57 +2,47 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|IM+Fell+English+SC" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>Pokedex</title>
+    <title>Egyptian Hall</title>
 </head>
 
 <body>
-    <div id="main">
-        <div class="row" id="main-ring">
-            <div id="gym-name" class="box col l12 center-align">
-                <p>Gym Box</p>
+    <div class="container">
+        <div id="main">
+            <div class="row" id="main-ring">
             </div>
-        </div>
-        <div class="row">
-            <div id="masha-pokemon" class="row box col l1"></div>
-            <div id="master-masha" class="row box col l2 center-align">
-                <div class="box col l12">
-                    <img src="images/girl.png">
+            <div class="row">
+                <div id="masha-pokemon" class="row box col l3 right-align"></div>
+                <div id="left-corner" class="box col l1 center-align">
+                    <div id="left-corner-poke"></div>
                 </div>
-            </div>
-            <div id="left-corner" class="box col l2 center-align">
-                <div id="leftr-corner-poke"></div>
-            </div>
-            <div id="box-ring" class="row box col l2 center-align">
-                <div class="box col l12" id="info">
-                    <p>
-                        info
-                    </p>
-                </div>
-                <div id="fight-place" class="box col l12 center-align">
-                    <div>
-                        <img src="images/fight.gif" id="fight">
+                <div id="box-ring" class="row box col l4 center-align">
+                    <div class="row box col l12">
+                        <div id="btn-fight" class="box col l6">
+                            <button class="choose-btn waves-effect waves-light btn">Fight</button>
+                        </div>
+                        <div id="btn-clean" class="box col l6">
+                            <button class="choose-btn waves-effect waves-light btn">Clear</button>
+                        </div>
                     </div>
-                </div>
-                <div class="row box col l12">
-                    <div id="btn-fight" class="box col l6">
-                        <button>Figth</button>
+                    <div class="box col l12" id="info">
                     </div>
-                    <div id="btn-clean" class="box col l6">
-                        <button>CLean</button>
+                    <div id="fight-place" class="box col l12 center-align">
+                        <div>
+                            <img src="images/new-gifs/bwwitfuzz.gif" id="fight">
+                        </div>
+                        <p id="result">
+
+                        </p>
                     </div>
+
                 </div>
-            </div>
-            <div id="right-corner" class="box col l2 center-align">
-                <div id="right-corner-poke"></div>
-            </div>
-            <div id="master-mada" class="box col l2 center-align">
-                <div class="box col l12">
-                    <img src="images/girl.png">
+                <div id="right-corner" class="box col l1 center-align">
+                    <div id="right-corner-poke"></div>
                 </div>
+                <div id="mada-pokemon" class="row box col l3 left-align"></div>
             </div>
-            <div id="mada-pokemon" class="row box col l1"></div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
