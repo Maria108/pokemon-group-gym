@@ -136,7 +136,14 @@ pokemonIds.forEach((id, idx) => {
         })
 })
 
+let box = document.createElement("audio")
+box.src = "sound/ring.mp3"
+
+let cheer = document.createElement("audio")
+cheer.src = "sound/cheer.mp3"
+
 btnF.addEventListener("click", (event) => {
+    box.play()
     leftPoke.style.display = "none"
     rightPoke.style.display = "none"
     fightDiv.style.display = "block"
@@ -145,6 +152,7 @@ btnF.addEventListener("click", (event) => {
         randomWinner()
         leftPoke.style.display = "block"
         rightPoke.style.display = "block"
+        cheer.play()
     }, 2500);
 })
 
