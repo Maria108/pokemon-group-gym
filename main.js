@@ -46,7 +46,7 @@ requirejs(['lib/mada', 'lib/masha'], () => {
         let pokemon = new Pokemon(name, hp, attack, defense, abilities, moves, pic);
 
         // Add pokemon to master
-        if (id === '018' || id === '026' || id === '037') {
+        if (id === '18' || id === '26' || id === '37') {
           masha.add(pokemon);
         } else {
           mada.add(pokemon);
@@ -56,7 +56,7 @@ requirejs(['lib/mada', 'lib/masha'], () => {
         let divImg = document.createElement('div');
         divImg.className = 'box col l12';
 
-        if (id === '018' || id === '026' || id === '037') {
+        if (id === '18' || id === '26' || id === '37') {
           mashaPokemon.appendChild(divImg);
         } else {
           madaPokemon.appendChild(divImg);
