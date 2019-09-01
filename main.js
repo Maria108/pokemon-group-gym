@@ -14,7 +14,7 @@ requirejs(['lib/mada', 'lib/masha'], () => {
   let masha = new MasterMasha();
   let mada = new MasterMada();
 
-  const pokemonIds = ['018', '026', '037', '134', '120', '190'];
+  const pokemonIds = ['18', '26', '37', '134', '120', '190'];
 
   let infoDiv = document.querySelector('#info');
   let leftPoke = document.querySelector('#left-corner-poke');
